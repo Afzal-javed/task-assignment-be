@@ -1,0 +1,24 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+# Deploy from repo root and set this file path, OR copy settings to Render Dashboard.
+
+services:
+  - type: web
+    name: taskflow-api
+    runtime: node
+    rootDir: BE
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 1d
+      - key: BCRYPT_SALT_ROUNDS
+        value: "12"
+      - key: LOG_LEVEL
+        value: warn
+      # Set these manually in Render Dashboard:
+      # MONGODB_URI, CORS_ORIGIN

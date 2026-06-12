@@ -1,4 +1,3 @@
-import mongoose from 'mongoose';
 import { createApp } from './app';
 import { env } from './config/env';
 import { connectDatabase, disconnectDatabase } from './database';

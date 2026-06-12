@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Production-ready Task Management Dashboard REST API",
   "main": "dist/server.js",
+  "engines": {
+    "node": ">=20 <23"
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc",
+    "render:build": "npm ci --include=dev && npm run build",
     "start": "node dist/server.js",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src tests --ext .ts",
