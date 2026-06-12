@@ -1,12 +1,11 @@
-# Render Blueprint — https://render.com/docs/blueprint-spec
-# Deploy from repo root and set this file path, OR copy settings to Render Dashboard.
+# For standalone BE repo (e.g. task-assignment-be on GitHub)
+# Render Dashboard → Settings should match these values.
 
 services:
   - type: web
     name: taskflow-api
     runtime: node
-    rootDir: BE
-    buildCommand: npm ci --include=dev && npm run build
+    buildCommand: npm install && npm run build
     startCommand: npm start
     healthCheckPath: /health
     envVars:
@@ -20,5 +19,3 @@ services:
         value: "12"
       - key: LOG_LEVEL
         value: warn
-      # Set these manually in Render Dashboard:
-      # MONGODB_URI, CORS_ORIGIN
