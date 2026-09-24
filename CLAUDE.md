@@ -22,7 +22,7 @@
   - `module.ts` (Dependency injection)
 - **Shared Code:** Common utilities, exceptions, middleware, and validators are in `src/shared/`.
 - **Validation:** Use **Zod** for request validation at the API boundary.
-- **Testing:** Integration tests in `tests/` using **Jest + Supertest + MongoDB Memory Server**.
+- **Testing:** Integration tests (planned) using **Jest + Supertest + MongoDB Memory Server**.
 
 ## Commands
 - `npm run dev`: Development mode

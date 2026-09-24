@@ -13,7 +13,7 @@
     "start": "node dist/server.js",
     "render:build": "npm install && npm run build",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint src tests --ext .ts",
+    "lint": "eslint src --ext .ts",
     "test": "jest --runInBand --forceExit",
     "test:coverage": "jest --runInBand --forceExit --coverage"
   },

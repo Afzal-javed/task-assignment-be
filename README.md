@@ -107,11 +107,6 @@ BE/
 │       ├── response/                 # Standardized API response formatter
 │       ├── validators/               # Zod request validation middleware
 │       └── logger/                   # Winston logger
-├── tests/
-│   ├── auth.test.ts                # Auth integration tests
-│   ├── tasks.test.ts               # Task CRUD integration tests
-│   ├── helpers.ts
-│   └── setup.ts
 ├── .env.example
 ├── .node-version                   # Node 20 for deployment
 ├── render.yaml                     # Render.com deploy config
@@ -325,17 +320,7 @@ Import `postman/Task-Management-API.postman_collection.json` for a full interact
 
 ## Testing
 
-```bash
-npm test              # Run all tests
-npm run test:coverage # With coverage report
-```
-
-**Test stack:** Jest + Supertest + MongoDB Memory Server (in-memory DB, no external MongoDB needed for tests).
-
-| Suite | Coverage |
-|-------|----------|
-| `auth.test.ts` | Register, login, logout, validation, duplicate email |
-| `tasks.test.ts` | CRUD, search, filter, dashboard stats, auth guards |
+Tests are currently under development. The project is set up with Jest, Supertest, and MongoDB Memory Server.
 
 ---
 
